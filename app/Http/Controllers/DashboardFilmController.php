@@ -99,7 +99,7 @@ class DashboardFilmController extends Controller
             if ($film->poster) {
                 Storage::delete($film->poster);
             }
-            $validatedData['poster'] = $request->file('poster')->store('film-posters');
+            $validatedData['poster'] = $request->file('poster')->store('film-posters', 'public');
         }
     
         $film->update($validatedData);
