@@ -46,7 +46,7 @@ class DashboardFilmController extends Controller
         ]);
     
         if ($request->file('poster')) {
-            $validatedData['poster'] = $request->file('poster')->store('film-posters');
+            $validatedData['poster'] = $request->file('poster')->store('film-posters', 'public');
         }
     
         $film = Film::create($validatedData);
