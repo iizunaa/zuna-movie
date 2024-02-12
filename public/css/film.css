@@ -1,0 +1,67 @@
+.stream-container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.stream-iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    aspect-ratio: 16 / 9;
+}
+
+.stream-film-poster{
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    height: calc(70% - 20px); /* Setengah tinggi total dikurangi margin */
+}
+
+.stream-film-info {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    display: flex; /* Gunakan flexbox */
+    flex-direction: column; /* Susun child elements secara vertikal */
+    justify-content: space-between; /* Distribusi ruang secara merata */
+    height: auto; /* Sesuaikan ketinggian secara otomatis berdasarkan konten */
+}
+
+.stream-film-poster img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Mengatur agar gambar tetap proporsional */
+}
+
+.stream-film-description {
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.rating-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.icon {
+    stroke: #000; /* Warna default ikon */
+    transition: stroke 0.3s; /* Transisi warna ikon */
+}
+
+.rating-button.active .icon {
+    stroke: #ff0000; /* Warna ikon ketika aktif */
+}
+
+.rating-button:focus {
+    outline: none;
+}

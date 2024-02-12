@@ -1,0 +1,19 @@
+runtime: "php82" # Atau versi PHP yang sesuai
+
+env_variables:
+  APP_KEY: "base64:VTYQMV8w9629RztiHI4kVo9d57Z0CyllQrYBbdWSJyo="
+  APP_ENV: "production"
+  APP_DEBUG: "false"
+  APP_URL: "https://zuna-movie.uc.r.appspot.com"
+  # Tambahkan variabel lain sesuai kebutuhan, misalnya konfigurasi database
+  DB_SOCKET: "/cloudsql/zuna-movie:us-central1:zm-db"
+  DB_DATABASE: "zuna_movie"
+  DB_USERNAME: "root"
+  DB_PASSWORD: "zunamovie"
+
+runtime_config:
+  document_root: public
+
+# Opsional: Konfigurasi layanan tambahan seperti Cloud SQL
+beta_settings:
+  cloud_sql_instances: "zuna-movie:us-central1:zm-db"
